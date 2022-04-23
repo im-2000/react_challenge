@@ -38,12 +38,12 @@ const StudentsList = () => {
         <div style={{ border: "2px solid white", marginTop: 30 }}>
           <img
             src={student.imgUrl}
-            style={{ maxWidth: 200 }}
+            style={{ maxWidth: 100 }}
             alt={student.name}
           />
 
-          <h3>name: {student.name}</h3>
-          <p> birth: {student.born}</p>
+          <p>{student.name}</p>
+          <p>birth date: {student.born}</p>
           <p>house id: {student.houseId}</p>
           <p>house: {student.house.name}</p>
           <button onClick={readMoreButton}>read more</button>
