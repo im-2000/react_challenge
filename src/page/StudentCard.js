@@ -3,8 +3,9 @@ const StudentCard = (props) => {
     <div className="Student">
       <h1>{props.id}</h1>
       <h1>{props.name}</h1>
-      <h2>{props.house}</h2>
-      <h3>{props.houseId}</h3>
+      <p>{props.born}</p>
+      <p>{props.houseID}</p>
+      <h3>{props.house.name}</h3>
     </div>
   );
 };
