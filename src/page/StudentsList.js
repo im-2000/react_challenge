@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import StudentCard from "./StudentCard";
+import StudentCard from "../components/StudentCard";
 import axios from "axios";
 
 const StudentsList = () => {
@@ -26,33 +26,17 @@ const StudentsList = () => {
 
   const studentsSorted = [...getStudents].sort(sortByAlphabet);
 
-  const readMoreButton = () => {
-    return StudentCard;
-  };
-
-  return (
+  return studentsSorted.length > 0 ? (
     <div>
-      <h1>Students List</h1>
+      <h1>HOGWARTS STUDENTS</h1>
 
       {studentsSorted.map((student) => (
-        <div style={{ border: "2px solid white", marginTop: 30 }}>
-          <img
-            src={student.imgUrl}
-            style={{ maxWidth: 100 }}
-            alt={student.name}
-          />
-
-          <p>{student.name}</p>
-          <p>birth date: {student.born}</p>
-          <p>house id: {student.houseId}</p>
-          <p>house: {student.house.name}</p>
-          <button onClick={readMoreButton}>read more</button>
-        </div>
+        <StudentCard {...student} />
       ))}
     </div>
+  ) : (
+    <p>Loading...</p>
   );
 };
-
-// the component is MOUNTED
 
 export default StudentsList;
