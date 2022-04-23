@@ -26,6 +26,10 @@ const StudentsList = () => {
 
   const studentsSorted = [...getStudents].sort(sortByAlphabet);
 
+  const readMoreButton = () => {
+    return StudentCard;
+  };
+
   return (
     <div>
       <h1>Students List</h1>
@@ -42,6 +46,7 @@ const StudentsList = () => {
           <p> birth: {student.born}</p>
           <p>house id: {student.houseId}</p>
           <p>house: {student.house.name}</p>
+          <button onClick={readMoreButton}>read more</button>
         </div>
       ))}
     </div>
