@@ -29,7 +29,7 @@ function HouseDetailPage() {
 
       <h2>STUDENTS</h2>
       {house.characters.map((student) => (
-        <StudentCard {...student} />
+        <StudentCard key={student.id} {...student} />
       ))}
     </div>
   ) : (
