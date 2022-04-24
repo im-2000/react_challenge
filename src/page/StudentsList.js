@@ -1,25 +1,43 @@
 import { useEffect, useState } from "react";
 import StudentCard from "../components/StudentCard";
+import HouseCard from "../components/HouseCard";
 import axios from "axios";
 
 const StudentsList = () => {
   const [getStudents, setStudents] = useState([]);
   const [getInputText, setInputText] = useState("");
+  const [getHouse, setHouse] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchDataStudents = async () => {
       try {
-        const response = await axios.get(
+        const responseStudents = await axios.get(
           "https://hp-assessment-api.herokuapp.com/hp/characters"
         );
 
-        setStudents(response.data);
+        setStudents(responseStudents.data);
       } catch (e) {
         console.log(e.message);
       }
     };
 
-    fetchData();
+    fetchDataStudents();
+  }, []);
+
+  useEffect(() => {
+    const fetchDataHouses = async () => {
+      try {
+        const responseHouses = await axios.get(
+          " https://hp-assessment-api.herokuapp.com/hp/houses"
+        );
+
+        setHouse(responseHouses.data);
+      } catch (e) {
+        console.log(e.message);
+      }
+    };
+
+    fetchDataHouses();
   }, []);
 
   const sortByAlphabet = (a, b) => {

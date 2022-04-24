@@ -26,11 +26,9 @@ function StudentDetailPage() {
       <p>PATRONUS: {student.patronus}</p>
       <p>BIRTH DATE: {student.born}</p>
       <p>QUOTE: {student.quote}</p>
-      <p>CREATED AT: {student.createdAt}</p>
-      <p>UPDATED AT: {student.updatedAt}</p>
       <p>HOUSE NAME{student.house.name}</p>
       <img
-        scr={student.house.imgUrl}
+        src={student.house.imgUrl}
         style={{ maxWidth: 200 }}
         alt={student.house.name}
       />
@@ -39,8 +37,6 @@ function StudentDetailPage() {
       <p>HOUSE ANIMAL: {student.house.animal}</p>
       <p>HOUSE COLORS: {student.house.colors}</p>
       <p>HOUSE GHOST{student.house.ghost}</p>
-      <p>CREATED AT:{student.house.createdAt}</p>
-      <p>UPDATED AT:{student.house.updatedAt}</p>
     </div>
   ) : (
     <p>Loading ...</p>
