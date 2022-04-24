@@ -47,7 +47,7 @@ const StudentsList = () => {
 
   const studentsSorted = [...getStudents].sort(sortByAlphabet);
   return studentsSorted ? (
-    <div>
+    <div className="List">
       <h1>HOGWARTS STUDENTS</h1>
       <p>{getInputText}</p>
       <input
@@ -56,7 +56,13 @@ const StudentsList = () => {
         onChange={(event) => setInputText(event.target.value)}
       />
 
-      <label htmlFor="search by house">search by house:</label>
+      <label
+        className="SELECTOR
+      "
+        htmlFor="search by house"
+      >
+        search by house:
+      </label>
       <select
         onChange={(event) => setSelectedHouse(event.target.value)}
         name="search by house"

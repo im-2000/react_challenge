@@ -2,7 +2,15 @@ import { NavLink } from "react-router-dom";
 
 function StudentCard(props) {
   return (
-    <div style={{ border: "2px solid white", marginTop: 30 }}>
+    <div
+      className="StudentCard"
+      style={{
+        border: "2px solid white",
+        marginTop: 60,
+        marginLeft: 600,
+        marginRight: 600,
+      }}
+    >
       <img src={props.imgUrl} style={{ maxWidth: 100 }} alt={props.name} />
 
       <h2>{props.name}</h2>

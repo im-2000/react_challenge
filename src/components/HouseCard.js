@@ -2,7 +2,14 @@ import { NavLink } from "react-router-dom";
 
 function HouseCard(props) {
   return (
-    <div style={{ border: "2px solid white", marginTop: 30 }}>
+    <div
+      style={{
+        border: "2px solid white",
+        marginTop: 60,
+        marginLeft: 600,
+        marginRight: 600,
+      }}
+    >
       <h2>{props.name}</h2>
       <img src={props.imgUrl} style={{ maxWidth: 200 }} alt={props.name} />
       <p>HOUSE ID: {props.id}</p>
@@ -13,9 +20,7 @@ function HouseCard(props) {
       <p>CREATED AT: {props.createdAt}</p>
       <p>UPDATED AT: {props.updatedAt}</p>
 
-      <NavLink to={`/details/${props.id}`}>
-        <button>read more</button>
-      </NavLink>
+      <NavLink to={`/details/${props.id}`}></NavLink>
     </div>
   );
 }

@@ -1,10 +1,31 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+}
+
+.SELECTOR {
+  color: red;
+  align-items: right;
+}
+
+.List {
+  color: red;
+  background-color: #282c34;
+  flex-direction: column;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.AppNav {
+  background-color: #282c34;
+}
+
+.NavElement {
+  background-color: #282c34;
+  color: red;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -25,7 +46,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: red;
 }
 
 @keyframes App-logo-spin {
