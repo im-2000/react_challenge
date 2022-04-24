@@ -4,6 +4,7 @@ import axios from "axios";
 
 const StudentsList = () => {
   const [getStudents, setStudents] = useState([]);
+  const [getInputText, setInputText] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,6 +18,7 @@ const StudentsList = () => {
         console.log(e.message);
       }
     };
+
     fetchData();
   }, []);
 
@@ -26,13 +28,23 @@ const StudentsList = () => {
 
   const studentsSorted = [...getStudents].sort(sortByAlphabet);
 
-  return studentsSorted.length > 0 ? (
+  return studentsSorted ? (
     <div>
       <h1>HOGWARTS STUDENTS</h1>
+      <p>{getInputText}</p>
+      <input
+        type="text"
+        value={getInputText}
+        onChange={(event) => setInputText(event.target.value)}
+      />
 
-      {studentsSorted.map((student) => (
-        <StudentCard {...student} />
-      ))}
+      {studentsSorted
+        .filter((student) =>
+          student.name.toLowerCase().includes(getInputText.toLowerCase())
+        )
+        .map((student) => (
+          <StudentCard {...student} />
+        ))}
     </div>
   ) : (
     <p>Loading...</p>
