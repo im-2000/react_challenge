@@ -18,9 +18,13 @@ function HouseDetailPage() {
   }, []);
 
   return house ? (
-    <div>
+    <div className="Details">
       <h1>{house.name}</h1>
-      <img src={house.imgUrl} style={{ maxWidth: 400 }} alt={house.name} />
+      <img
+        src={house.imgUrl}
+        style={{ height: 500, width: 700 }}
+        alt={house.name}
+      />
       <p>HOUSE ID: {house.id}</p>
       <p>HOUSE FOUNDER: {house.founder}</p>
       <p>HOUSE ANIMAL: {house.animal}</p>

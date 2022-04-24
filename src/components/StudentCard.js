@@ -11,17 +11,24 @@ function StudentCard(props) {
         marginRight: 600,
       }}
     >
-      <img src={props.imgUrl} style={{ maxWidth: 100 }} alt={props.name} />
+      <img
+        className="Image"
+        src={props.imgUrl}
+        style={{ width: 200, height: 200, borderRadius: 75 }}
+        alt={props.name}
+      />
 
-      <h2>{props.name}</h2>
-      <p>birth date: {props.born}</p>
-      <NavLink to={`/house/details/${props.houseId}`}>
-        <p> HOUSE ID: {props.houseId} </p>
-      </NavLink>
+      <h2 className="Name"> {props.name}</h2>
+      <div className="Description">
+        <p>birth date: {props.born}</p>
+        <NavLink to={`/house/details/${props.houseId}`}>
+          <p> HOUSE ID: {props.houseId} </p>
+        </NavLink>
 
-      <NavLink to={`/details/${props.id}`}>
-        <button>read more</button>
-      </NavLink>
+        <NavLink className="NavElement" to={`/details/${props.id}`}>
+          <button>read more</button>
+        </NavLink>
+      </div>
     </div>
   );
 }

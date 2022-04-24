@@ -17,16 +17,16 @@ function StudentDetailPage() {
   }, []);
 
   return student ? (
-    <div>
+    <div className="Details">
       <h2>{student.name}</h2>
-      <img src={student.imgUrl} style={{ maxWidth: 300 }} alt={student.name} />
+      <img src={student.imgUrl} style={{ maxWidth: 500 }} alt={student.name} />
       <p>ID: {student.id}</p>
       <p>BLOOD: {student.blood}</p>
       <p>SPECIES: {student.species}</p>
       <p>PATRONUS: {student.patronus}</p>
       <p>BIRTH DATE: {student.born}</p>
       <p>QUOTE: {student.quote}</p>
-      <p>HOUSE NAME{student.house.name}</p>
+      <p>HOUSE NAME: {student.house.name}</p>
       <img
         src={student.house.imgUrl}
         style={{ maxWidth: 200 }}

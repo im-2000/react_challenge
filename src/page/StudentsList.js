@@ -56,11 +56,7 @@ const StudentsList = () => {
         onChange={(event) => setInputText(event.target.value)}
       />
 
-      <label
-        className="SELECTOR
-      "
-        htmlFor="search by house"
-      >
+      <label className="SELECTOR" htmlFor="search by house">
         search by house:
       </label>
       <select

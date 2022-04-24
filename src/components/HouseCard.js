@@ -20,7 +20,7 @@ function HouseCard(props) {
       <p>CREATED AT: {props.createdAt}</p>
       <p>UPDATED AT: {props.updatedAt}</p>
 
-      <NavLink to={`/details/${props.id}`}></NavLink>
+      <NavLink className="NavElement" to={`/details/${props.id}`}></NavLink>
     </div>
   );
 }

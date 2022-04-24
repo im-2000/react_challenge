@@ -14,18 +14,32 @@
   flex-direction: column;
 }
 
+.Details {
+  color: red;
+  background-color: #282c34;
+  flex-direction: column;
+}
+
+.Name {
+  color: red;
+}
+
+.Description {
+  color: white;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 .AppNav {
-  background-color: #282c34;
+  background-color: ##282c34;
 }
 
 .NavElement {
   background-color: #282c34;
-  color: red;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
